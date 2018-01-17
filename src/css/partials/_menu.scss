@@ -1,0 +1,137 @@
+.topbar{
+  height: 10vh;
+  border-bottom: solid 2px black;
+}
+
+.layer{
+  display: none;
+}
+
+.layer_visible{
+  display: inline;
+}
+
+.burger {
+  position: relative;
+  height: 30px;
+  margin: 0 auto;
+  color: #60635E;
+  text-transform: uppercase;
+}
+
+.burger_click {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.burger-menu-txt {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  cursor: default;
+  transition: opacity 200ms ease-out, transform 200ms cubic-bezier(.34, .55, .25, .83);
+
+  .is-open & {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+}
+
+$menu-animation-duration: 400ms;
+$menu-animation-timing:   ease-out;
+
+.burger_line {
+  display: block;
+  position: absolute;
+  width: 40px;
+  border-top: 6px solid #C2C2C2;
+  transform-origin: 50% 50%;
+  transition: transform $menu-animation-duration $menu-animation-timing;
+
+  &:nth-child(1) {
+    top: 0;
+  }
+
+  &:nth-child(2) {
+    top: 12px;
+    opacity: 1;
+    transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
+  }
+
+  &:nth-child(3) {
+    top: 24px;
+  }
+
+  .active & {
+
+    &:nth-child(1) {
+      animation: burger-open-top $menu-animation-duration $menu-animation-timing forwards;
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
+    }
+
+    &:nth-child(3) {
+      animation: burger-open-bot $menu-animation-duration $menu-animation-timing forwards;
+    }
+  }
+
+  .closing & {
+    &:nth-child(1) {
+      animation: burger-close-top $menu-animation-duration $menu-animation-timing forwards;
+    }
+
+    &:nth-child(3) {
+      animation: burger-close-bot $menu-animation-duration $menu-animation-timing forwards;
+    }
+  }
+}
+
+@keyframes burger-open-top {
+  50% {
+    transform: translate3d(0, 12px, 0);
+  }
+  100% {
+    transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
+}
+
+@keyframes burger-open-bot {
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+  100% {
+    transform: translate3d(0, -12px, 0) rotate(-45deg);
+  }
+}
+
+@keyframes burger-close-top {
+  0% {
+    transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate3d(0, 12px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes burger-close-bot {
+  0% {
+    transform: translate3d(0, -12px, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

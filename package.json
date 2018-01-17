@@ -1,0 +1,26 @@
+{
+  "name": "tpjquerygohappy",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-load-plugins": "latest",
+    "browser-sync": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cssbeautify": "latest",
+    "gulp-csscomb": "latest",
+    "gulp-csso": "latest",
+    "gulp-html-partial": "latest",
+    "gulp-less": "latest",
+    "gulp-rename": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-cache": "latest",
+    "gulp-html-beautify": "latest",
+    "gulp-sass": "latest",
+    "gulp-notify": "latest",
+    "gulp-size": "latest",
+    "gulp-concat": "latest",
+    "gulp-uglify": "latest",
+    "gulp-order": "latest",
+    "gulp-ignore": "latest"
+  }
+}
