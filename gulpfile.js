@@ -77,6 +77,17 @@ gulp.task('images', function () {
         .pipe(gulp.dest(destination + '/img/'));
 });
 
+const gulp = require('gulp');
+const htmlPartial = require('gulp-html-partial');
+
+gulp.task('html', function () {
+    gulp.src([source +'*.html'])
+        .pipe(htmlPartial({
+            basePath: source +'/partials/'
+        }))
+        .pipe(gulp.dest('build'));
+});
+
 gulp.task('watch',['images', 'sass', 'html', 'js', 'browserSync'], function () {
     gulp.watch(destination + '/*.html', ['reload']);
     gulp.watch(source + '/**/*.html', ['html']);
