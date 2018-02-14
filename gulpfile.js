@@ -1,21 +1,19 @@
+'use strict';
+
 // Requis
 var gulp = require('gulp');
+var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
 
 // Include plugins
 var plugins = require('gulp-load-plugins')(); // tous les plugins de package.json
-var browserSync = require('browser-sync').create();
 
 // Variables de chemins
 var source = './src/'; // dossier de travail
 var destination = './dist/'; // dossier à livrer
 
 
-'use strict';
-
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-
+const htmlPartial = require('gulp-html-partial');
 
 gulp.task('js', function () {
     return gulp.src([source + "*.js", source + '/**/*.js'])
@@ -76,9 +74,6 @@ gulp.task('images', function () {
         .pipe(plugins.cache(plugins.imagemin({optimizationLevel: 3, progressive: true, interlaced: true})))
         .pipe(gulp.dest(destination + '/img/'));
 });
-
-const gulp = require('gulp');
-const htmlPartial = require('gulp-html-partial');
 
 gulp.task('html', function () {
     gulp.src([source +'*.html'])
