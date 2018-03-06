@@ -80,7 +80,7 @@ gulp.task('html', function () {
         .pipe(htmlPartial({
             basePath: source +'/partials/'
         }))
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest(destination));
 });
 
 gulp.task('watch',['images', 'sass', 'html', 'js', 'browserSync'], function () {

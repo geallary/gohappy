@@ -1,2 +1,55 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i');
 @import 'main';
+
+/*Global*/
+
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+section div{
+  overflow: hidden;
+}
+
+
+  img {
+    width: 100%;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+
+.more_button {
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background: #0b9cb3;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+
+  p {
+    padding-top: 35px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &:hover{
+    background: #80c262;
+
+  }
+}

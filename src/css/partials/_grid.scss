@@ -4,44 +4,33 @@ CUSTOM GRID*/
 
 
 /* Section */
-.section {
+section {
   clear: both;
   margin: 0px;
   padding: 0px;
 }
-/* Column */
-.col {
-  background: #eee;
-  display: block;
-  float:left;
-  margin: 1% 0 1% 2%;
+
+/* Grid*/
+.flex_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
 }
-.col:first-child { margin-left: 0 !important; }
 
-/* Row */
-.row:before,
-.row:after { content:""; display:table; }
-.row:after { clear:both;}
-.row { zoom:1; /* For IE 6/7 */ }
-
-/* Grid */
-.grid_1_of_8{ width: 10.75% }
-.grid_2_of_8{ width: 23.5% }
-.grid_3_of_8{ width: 36.25% }
-.grid_4_of_8{ width: 49% }
-.grid_5_of_8{ width: 61.75% }
-.grid_6_of_8{ width: 74.5% }
-.grid_7_of_8{ width: 87.25% }
-.grid_8_of_8{ width: 100% }
-
+.flex_item {
+  flex:1;
+  align-self: auto;
+}
 
 /*---------------------------------------------------------------------------------------------------------
 MEDIA QUERY GRID*/
 
 /* Full Width below 768 pixels */
 @media only screen and (max-width: 768px) {
-  .col {  margin: 2% 0 2% 0%; }
-  [class*='grid_'] { width: 100%; }
+
 }
 
 
@@ -112,13 +101,21 @@ CUSTOM PADDING*/
 .no-margin-bottom { margin-bottom:0; }
 .no-padding-bottom { padding-bottom:0; }
 
-.section-padding {
-  padding-top: 80px;
-  padding-bottom: 80px;
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.section-padding-top {
-  padding-top: 80px;
+.section-min{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-full{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-padding {
