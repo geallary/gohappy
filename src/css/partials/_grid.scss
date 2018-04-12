@@ -2,104 +2,17 @@
 CUSTOM GRID*/
 
 
-
-/* Section */
 section {
   clear: both;
   margin: 0px;
   padding: 0px;
 }
 
-/* Grid*/
-.flex_container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: flex-start;
-  align-items: flex-start;
+.section-margin {
+  margin-top: 75px;
+  margin-bottom: 75px;
 }
 
-.flex_item {
-  flex:1;
-  align-self: auto;
-}
-
-/*---------------------------------------------------------------------------------------------------------
-MEDIA QUERY GRID*/
-
-/* Full Width below 768 pixels */
-@media only screen and (max-width: 768px) {
-
-}
-
-
-
-
-/*---------------------------------------------------------------------------------------------------------
-CUSTOM PADDING*/
-
-.pt10 { padding-top:10px; }
-.pt15 { padding-top:15px; }
-.pt20 { padding-top:20px; }
-.pt30 { padding-top:30px; }
-.pt40 { padding-top:40px; }
-.pt50 { padding-top:50px; }
-.pt60 { padding-top:60px; }
-.pt80 { padding-top:80px; }
-.pt90 { padding-top:90px; }
-.pt100 { padding-top:100px; }
-.pb0 { padding-bottom:0; }
-.pb5 { padding-bottom:5px; }
-.pb10 { padding-bottom:10px; }
-.pb15 { padding-bottom:15px; }
-.pb20 { padding-bottom:20px; }
-.pb30 { padding-bottom:30px; }
-.pb40 { padding-bottom:40px; }
-.pb50 { padding-bottom:50px; }
-.pb60 { padding-bottom:60px; }
-.pb80 { padding-bottom:80px; }
-.pb90 { padding-bottom:90px; }
-.pb100 { padding-bottom:100px; }
-
-.mt10 { margin-top:10px; }
-.mt15 { margin-top:15px; }
-.mt20 { margin-top:20px; }
-.mt30 { margin-top:30px; }
-.mt40 { margin-top:40px; }
-.mt50 { margin-top:50px; }
-.mt60 { margin-top:60px; }
-.mt80 { margin-top:80px; }
-.mt90 { margin-top:90px; }
-.mt100 { margin-top:100px; }
-.mb0 { margin-bottom:0; }
-.mb5 { margin-bottom:5px; }
-.mb10 { margin-bottom:10px; }
-.mb15 { margin-bottom:15px; }
-.mb20 { margin-bottom:20px; }
-.mb30 { margin-bottom:30px; }
-.mb40 { margin-bottom:40px; }
-.mb50 { margin-bottom:50px; }
-.mb60 { margin-bottom:60px; }
-.mb80 { margin-bottom:80px; }
-.mb90 { margin-bottom:90px; }
-.mb100 { margin-bottom:100px; }
-
-.ml30 { margin-left: 30px }
-.mr30 { margin-right: 30px }
-.ml15 { margin-left: 15px }
-.mr15 { margin-right: 15px }
-.pl30 { padding-left: 30px }
-.pr30 { padding-right: 30px }
-.pl15 { padding-left: 15px }
-.pr15 { padding-right: 15px }
-
-.no-margin { margin:0; }
-.no-padding { padding:0; }
-.no-margin-top { margin-top:0; }
-.no-padding-top { padding-top:0; }
-.no-margin-bottom { margin-bottom:0; }
-.no-padding-bottom { padding-bottom:0; }
 
 .section {
   padding-top: 50px;
@@ -123,31 +36,31 @@ CUSTOM PADDING*/
   padding-bottom: 60px;
 }
 
-/*---------------------------------------------------------------------------------------------------------
-MEDIA QUERIES*/
 
-@media (max-width:767px) {
-  .mt10-xs { margin-top:10px; }
-  .mt20-xs { margin-top:20px; }
-  .mt30-xs { margin-top:30px; }
-  .mt40-xs { margin-top:40px; }
-  .mb10-xs { margin-bottom:10px; }
-  .mb20-xs { margin-bottom:20px; }
-  .mb30-xs { margin-bottom:30px; }
-  .mb40-xs { margin-bottom:40px; }
+/* Grid*/
+.flex_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 
-@media (min-width: 768px) {}
-
-@media (min-width: 768px) and (max-width:992px) {
-  .mt10-sm { margin-top:10px; }
-  .mb10-sm { margin-bottom:10px; }
-  .mt20-sm { margin-top:20px; }
-  .mb20-sm { margin-bottom:20px; }
-  .mt30-sm { margin-top:30px; }
-  .mb30-sm { margin-bottom:30px; }
+.flex_item {
+  flex:1;
+  align-self: auto;
 }
 
-@media (min-width:992px) {}
 
-@media (min-width:1200px) {}
+.center{
+  text-align: center;
+}
+
+.left{
+  text-align: left;
+}
+
+.right{
+  text-align: right;
+}

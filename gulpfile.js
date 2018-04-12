@@ -17,12 +17,11 @@ const htmlPartial = require('gulp-html-partial');
 
 gulp.task('js', function () {
     return gulp.src([source + "*.js", source + '/**/*.js'])
-        .pipe(gulp.dest(destination + '/js/'))
+        .pipe(gulp.dest(destination))
         .pipe(plugins.uglify())
         .pipe(plugins.concat('script.js', {newLine: ';'}))
         .pipe(plugins.rename({suffix: '.min'}))
         .pipe(gulp.dest(destination + '/js/'))
-
         .pipe(browserSync.reload({
             stream: true
         }))

@@ -1,9 +1,16 @@
 /*--------------------------------------------------------------------------------------------------
 BACKGROUNDCOLOR*/
 
-.bg1 { background-color: #404040; }
-.bg2 { background-color: #727272; }
-.bg3 { background-color: #ffffff; }
-.bg4 { background-color: #F1F1F1; }
-.bg4 { background-color: #0B9CB3; }
-.bg5 { background-color: #80C262; }
+$color-black: #404040;
+$color-grey: #727272;
+$color-white: #ffffff;
+$color-light: #F7F7F7;
+$color-blue: #0B9CB3;
+$color-green: #80C262;
+
+.bg1 { background-color: $color-black; }
+.bg2 { background-color: $color-grey; }
+.bg3 { background-color: $color-white; }
+.bg4 { background-color: $color-light; }
+.bg5 { background-color: $color-blue; }
+.bg6 { background-color: $color-green; }

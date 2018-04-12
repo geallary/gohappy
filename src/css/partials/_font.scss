@@ -2,27 +2,27 @@
 FONTCOLOR*/
 
 .fblack {
-  color: #404040;
+  color: $color-black;
 }
 
 .fgrey {
-  color: #727272;
+  color: $color-grey;
 }
 
 .fblue {
-  color: #0B9CB3;
+  color: $color-blue;
 }
 
 .fgreen {
-  color: #80C262;
+  color: $color-green;
 }
 
 .fwhite {
-  color: #ffffff;
+  color: $color-white;
 }
 
 .flightwhite {
-  color: #F1F1F1;
+  color: $color-light;
 }
 
 /*--------------------------------------------------------------------------------------------------
@@ -33,21 +33,30 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 75px;
   text-transform: uppercase;
   text-align: center;
+  color: $color-blue;
+
 }
 
 h2 {
   font-size: 75px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: $color-black;
 }
 
 h3 {
   font-size: 25px;
+  color: $color-black;
+
 }
 
 h4 {
   font-size: 25px;
+  color: $color-black;
+
 }
 
 p {
@@ -55,16 +64,18 @@ p {
   font-size: 16px;
   letter-spacing: 0.5px;
   line-height: 23px;
+  color: $color-black;
+
 }
 
 a {
 
-  color: #fff;
+  color: $color-white;
   font-size: 18px;
   text-decoration: none;
 
   &:hover {
-  color:#fff;
+  color: $color-white;
   }
 
 }

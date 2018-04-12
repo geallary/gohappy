@@ -22,5 +22,8 @@
     "gulp-sass": "latest",
     "gulp-size": "latest",
     "gulp-uglify": "latest"
+  },
+  "dependencies": {
+    "npm": "^5.8.0"
   }
 }

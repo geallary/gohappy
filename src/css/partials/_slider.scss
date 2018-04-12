@@ -1,3 +1,127 @@
-.slider_container {
+/*--------------------------------------------------------------------------------------------------
+SLIDER*/
+
+.slide {
   height: 90vh;
+
+  &:hover {
+
+
+    img {
+      -webkit-animation: resize 5s linear forwards;
+      -o-animation: resize 5s linear forwards;
+      animation: resize 5s linear forwards;
+      filter: brightness(75%) blur(0px);
+      transition-duration: 5s;
+    }
+  }
+
+  img {
+    z-index: -10;
+    position: relative;
+    filter: brightness(50%) blur(5px);
+    width: 101%;
+  }
+
+  p, h2 {
+    z-index: 0;
+    position: absolute;
+    margin: 10vw;
+    color: $color-white;
+  }
+
+  h2 {
+    margin-top: 25vh;
+    font-size: 70px;
+  }
+
+  p {
+    margin-top: 45vh;
+  }
+}
+
+
+/*--------------------------------------------------------------------------------------------------
+SLIDERSCROLL*/
+
+#mouse-scroll {
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  top: 90vh;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 15;
+}
+
+#mouse-scroll span{
+  display: block;
+  width: 10px;
+  height: 10px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  margin: 0 0 3px 5px;
+}
+#mouse-scroll .mouse {
+  height: 50px;
+  width: 30px;
+  border-radius: 25px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border: 2px solid #ffffff;
+  top: 170px;
+}
+
+#mouse-scroll .mouse-in {
+  height: 10px;
+  width: 2px;
+  display: block;
+  margin: 5px auto;
+  background: #ffffff;
+  position: relative;
+}
+#mouse-scroll .mouse-in {
+  -webkit-animation: animated-mouse 1.2s ease infinite;
+  moz-animation: mouse-animated 1.2s ease infinite;
+}
+
+@-webkit-keyframes animated-mouse {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    transform: translateY(15px);
+  }
+}
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
